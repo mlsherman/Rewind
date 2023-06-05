@@ -21,7 +21,9 @@
       src="https://kit.fontawesome.com/5db21ba9c6.js"
       crossorigin="anonymous"
     ></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
     <link href="css/site.css" rel="stylesheet" />
   </head>
 
@@ -29,13 +31,13 @@
     <!-- ---- NAV SECTION ---- -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand future" href="app.html"
           ><img
             src="img/Color logo - no background.svg"
             class="d-inline-block align-text-top"
-            width="42"
-            height="36"
-          />APP NAME</a
+            width="24"
+            
+          />TIME WARP</a
         >
         <button
           class="navbar-toggler"
@@ -73,22 +75,63 @@
     </nav>
 
     <!-- ---- MAIN SECTION ---- -->
-    <main class="flex-shrink-0">
+    <main class="flex-shrink-0 text-light">
         <div class="container py-4 px-5  mt-5">
           <h2 class="border-1 border-bottom border-dark">The Code</h2>
           <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
               <pre class="line-numbers">
-                <code class="language-javascript">// Call Hello World 
-                  function HelloWorld() {
-                      alert("Hello World")
+                <code class="language-javascript">// Get the string from the page
+                  // controller function
+                  function getValues(){
+                  
+                    document.getElementById("alert").classList.add("invisible");
+                  
+                    let userString = document.getElementById("userString").value;
+                  
+                    let revString = reverseString(userString);
+                  
+                    displayString(revString);
+                  }
+                  
+                  // Reverse the string
+                  // logic function
+                  function reverseString(userString){
+                  
+                      let revString = [];
+                                                     
+                      // last position in an array name.length - 1
+                  
+                      // reverse a string using a for loop
+                      for (let index = userString.length - 1; index >= 0; index--) {
+                         revString += userString[index];
+                      }
+                  
+                      return revString
+                  
+                  }
+                  
+                  // Display the reversed string to the user
+                  // view function
+                  function displayString(revstring){
+                  
+                      // write to the page
+                      document.getElementById("msg").innerHTML = `Your string reversed is: ${revstring}`;
+                      // show the alert box
+                      document.getElementById("alert").classList.remove("invisible");
+                  
+                  
                   }</code>
               </pre>
             </div>
             <div class="col-lg-4">
-              <p>The Code is structured in one function.</p>
-              <h5>Hello World</h5>
-              <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+              <p>The Code is structured in three functions.</p>
+              <h5>getValues</h5>
+              <p>The getValues function is called once the submit button is pressed running our code. It uses "getElementById" to get the values from the html page. Then it calls our reverse and display functions to finish the task.  </p>
+              <h5>reverseString(userString)</h5>
+              <p>The reversing of the string is handled by our next function. First an empty array is declared where the resulting reversed string will go. Then a for loop is used to loop through the array reversing our text.</p>
+              <h5>displayString(revstring)</h5>
+              <p>The displayString function uses getElementById to display our html "Your string reversed is" followed by our reversed string. It also removes the invisible class from our alert section so that the results are displayed on the page.</p>
             </div>
           </div>
         </div>

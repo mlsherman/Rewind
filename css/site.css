@@ -9,6 +9,11 @@ body{
     color: var(--dark-color);
 }
 
+.future{
+    font-family: 'Inter', sans-serif;
+font-family: 'Racing Sans One', cursive;
+}
+
 nav{
     background-color: var(--dark-color);
 }
@@ -17,8 +22,16 @@ footer{
     background-color: var(--dark-color);
 }
 
-h1,h2,h3,h4,h5,h6{
-    color: var(--primary-color);
+h1{
+    color: #f41cff;
+}
+
+h2,h3,h4,h5,h6{
+    color: #3bff43;
+}
+
+.intro{
+    margin-top: 150px;
 }
 
 main>.container {
@@ -50,6 +63,7 @@ footer .social>a:hover{
     height: auto;
     left: 0px;
     right: 0px;
+    margin-bottom: -100px;
 }
 
 .bsicon{
@@ -69,7 +83,7 @@ footer .social>a:hover{
 }
 
 .checklist >li i{
-    color: var(--secondary-color);
+    color: #3bff43;
 }
 
 code[class*="language-"],
@@ -77,4 +91,17 @@ code[class*="language-"],
         white-space: pre-wrap;
         word-break: break-all;
         word-wrap: break-word;
+}
+
+.btn:hover {
+    background-color: #f41cff;
+    color: black;
+}
+
+body{
+    background-color: black;
+}
+
+.btn2{
+    background-color: #3bff43;
 }
